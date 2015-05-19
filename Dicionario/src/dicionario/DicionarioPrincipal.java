@@ -73,7 +73,7 @@ public class DicionarioPrincipal {
                 case 7: 
                     break;    
             }
-        } while (controle != 6);
+        } while (controle != 7);
 
     }
 
