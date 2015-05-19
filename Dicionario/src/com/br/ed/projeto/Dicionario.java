@@ -100,4 +100,9 @@ public class Dicionario {
         }
         return qtd;
     }
+
+    public void deletaTudo() {
+        conjunto = null;
+        tamanho = 0;
+    }
 }
