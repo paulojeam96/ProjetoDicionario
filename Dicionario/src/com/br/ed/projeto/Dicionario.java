@@ -40,6 +40,9 @@ public class Dicionario {
         LinkedList<HashTableEntry> lista = conjunto.get(indice);
 
         lista.add(new HashTableEntry(palavra));
+        System.out.println("Valor cadastrado com sucesso!");
+        conjunto.set(indice, lista);
+        tamanho++;
     }
 
     public void remove(Definicao valor) {
@@ -58,6 +61,7 @@ public class Dicionario {
         if (flag == 0) {
             System.out.println("Essa valor NÃO está cadastrado!!");
         }
+        conjunto.set(indice, lista);
 
     }
 
@@ -88,7 +92,12 @@ public class Dicionario {
     }
     
     public int qtdDefinicoes(){
-        
-        return 0;
+        int qtd = 0;
+        for (int i = 0; i < conjunto.size(); i++) {
+            for (LinkedList<HashTableEntry> aux : conjunto) {
+                qtd++;
+            }
+        }
+        return qtd;
     }
 }
